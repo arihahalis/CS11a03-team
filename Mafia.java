@@ -17,7 +17,7 @@ public class Mafia{
     String yn = scan.nextLine();
     if(yn.equals("No")){
       System.out.println("Take your time!");
-      pause();
+      pause1();
     }
     else if(yn.equals("Yes")){
       System.out.println("Great, let's get started!");
@@ -62,15 +62,25 @@ public class Mafia{
         role = "Innocent";
       }
       System.out.printf("player %d is %s%n",i,role);
-      System.out.println("Pass the laptop to the next player.");
-      pause();
+      pause2();
+
     }
   }
-  public static void pause(){
-    System.out.println("Press Enter to continue");
-    System.out.printf("%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n");
+  public static void pause1(){
+    System.out.println("If you are ready, press Enter to start!");
     try{System.in.read();}
     catch(Exception e){}
-    
+
+  }
+  public static void pause2(){
+    System.out.println("Press ENTER to continue.");
+    try{System.in.read();}
+    catch(Exception e){}
+    System.out.printf("%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n");
+    System.out.println("Pass the laptop to the next player.Next player please press Enter to continue.");
+
+    try{System.in.read();}
+    catch(Exception e){}
+
   }
 }
