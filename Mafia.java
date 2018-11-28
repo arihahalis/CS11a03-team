@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class mafia{
+public class Mafia{
   public static void main(String[]args){
     System.out.println("MAFIA");
     System.out.println("Choose a group of 8. Select a moderator. They will operate the computer.");
