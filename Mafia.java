@@ -1,7 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Mafia{
+
+public class mafia{
   public static void main(String[]args){
     System.out.println("MAFIA");
     System.out.println("Choose a group of 8. Select a moderator. They will operate the computer.");
@@ -60,14 +61,16 @@ public class Mafia{
       else if (n==4||n==5||n==6){
         role = "Innocent";
       }
-      System.out.printf("player %d is %s%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n",i,role);
+      System.out.printf("player %d is %s%n",i,role);
       System.out.println("Pass the laptop to the next player.");
       pause();
     }
   }
   public static void pause(){
     System.out.println("Press Enter to continue");
+    System.out.printf("%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n");
     try{System.in.read();}
     catch(Exception e){}
+    
   }
 }
