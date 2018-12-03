@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+//import java.util.Arrays;
 
 
 public class Mafia{
@@ -33,6 +34,8 @@ public class Mafia{
 
     pause1();
 
+    boolean gameContinues = true;
+    while (gameContinues){
     System.out.println("Please have all players close their eyes and put down their heads.");
     System.out.println("Say: Mafia, open your eyes. Make sure you know the other mafia. Pick a victim by showing me the number.");
     //code for Mafias
@@ -42,13 +45,13 @@ public class Mafia{
     System.out.println("Say: Detective, open your eyes. Who would you like to know about? Please show me the number.");
     // code for detective
     //If the Detective is correct, that Mafia member is eliminated from the game.
-    
+
     for (int i=0; i<7; i++){
     if (roles[i].equals( "Detective")){
       if (alive[i]==true){
       System.out.println("Enter the player number of the suspected Mafia.");
       int suspected1 = scan.nextInt();
-        if (roles[suspected1-1].equals( "Mafia")){
+        if (roles[suspected1].equals( "Mafia")){
           System.out.println("Player "+suspected1+" is a mafia.");
         }else{
           System.out.println("Player "+suspected1+" is not a mafia.");
@@ -56,7 +59,7 @@ public class Mafia{
         System.out.println("Say: Detective, close your eyes.");
         }
         else{
-         System.out.println("***The detective is already dead but please follow the script***")
+         System.out.println("***The detective is already dead but please follow the script***");
          System.out.println("Say: Detective, close your eyes.");
          }
        }
@@ -85,6 +88,7 @@ public class Mafia{
           System.out.println("Tell the players that no one died last night.");
         } else {
           System.out.println("Tell the players that player "+victim1+" was killed last night.");
+          alive[victim1] = false;
         }
 
         pause1();
@@ -92,7 +96,7 @@ public class Mafia{
         System.out.println("Please hold a discussion about recent events. When the discussion reaches a point where a player has a suspicion, the game moves on to the accusation.");
         System.out.println("Who did they vote? Enter the number.");
         int vote1 = scan.nextInt();
-        alive[vote1-1] = false;
+        alive[vote1] = false;
         //System.out.println(victim1+" "+dec1+" "+saved1);
         int mafiacounter=0;
         int nonmafiacounter=0;
@@ -110,15 +114,22 @@ public class Mafia{
           if (mafiacounter==0){
             System.out.println("The innocent party wins!");
             System.out.println("Game over.");
+            gameContinues = false;
+
             }
           else if (mafiacounter==nonmafiacounter){
             System.out.println("The mafia party wins!");
             System.out.println("Game over.");
+            gameContinues = false;
             }
           else {
             System.out.println("Game continues.");
+            gameContinues = true;
+            //System.out.printf("%s%n%s", Arrays.toString(alive), Arrays.toString(roles));
+
             }
          }
+  }
 
 
       public static void playersRole(int[] players){
