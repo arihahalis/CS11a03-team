@@ -45,7 +45,7 @@ public class Mafia{
 
     System.out.println("Enter the player number of the suspected Mafia.");
     int suspected1 = scan.nextInt();
-        if (roles[suspected1-1] .equals( "Mafia")){
+        if (roles[suspected1-1].equals( "Mafia")){
           System.out.println("Player "+suspected1+" is a mafia.");
         }else{
           System.out.println("Player "+suspected1+" is not a mafia.");
@@ -63,7 +63,8 @@ public class Mafia{
         System.out.println("Enter the player number of the person been saved.");
         int saved1 = scan.nextInt();
 
-        System.out.println("Please tell everyone to open their eyes.");
+        System.out.println("Say: Everyone, open your eyes.");
+        System.out.println("Press enter to continue");
 
         pause1();
 
@@ -80,8 +81,32 @@ public class Mafia{
         int vote1 = scan.nextInt();
         alive[vote1-1] = false;
         //System.out.println(victim1+" "+dec1+" "+saved1);
+        int mafiacounter=0;
+        int nonmafiacounter=0;
+        for (int i=0; i<7; i++){
+          if (roles[i].equals( "Mafia")){
+            if (alive[i]==true){
+              mafiacounter++;
+            }
+          }
+          else{if (alive[i]==true){
+            nonmafiacounter++;
+                }
+              }
+            }
+          if (mafiacounter==0){
+            System.out.println("The innocent party wins!");
+            System.out.println("Game over.");
+            }
+          else if (mafiacounter==nonmafiacounter){
+            System.out.println("The mafia party wins!");
+            System.out.println("Game over.");
+            }
+          else {
+            System.out.println("Game continues.");
+            }
+         }
 
-      }
 
       public static void playersRole(int[] players){
         String role = " ";
