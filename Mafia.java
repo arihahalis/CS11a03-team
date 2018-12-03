@@ -53,20 +53,20 @@ public class Mafia{
         System.out.println("Say: Detective, close your eyes.");
 
 
-       
+
         //code for healer
         //The Doctor can choose to save himself and thus survive the night.
         //If the Doctor chooses another player and that individual is chosen by the Mafia to be killed,
 
         //If the Doctor is chosen for death by the Mafia,
         //he is out of the game and the townspeople can no longer be saved.
-        System.out.println("Say:Wake up the Healer and choose a person to save.");
+        System.out.println("Say:Wake up the Healer and ask who they want to save.");
         //code for healer
 
-          System.out.println("Enter the player number of the person been saved.");
-          int saved1 = scan.nextInt();
+        System.out.println("Enter the player number of the person been saved. If the healer is dead, enter the number 7");
+        int saved1 = scan.nextInt();
 
-       
+
         System.out.println("Say: Everyone, open your eyes.");
         System.out.println("Press enter to continue");
 
@@ -154,18 +154,17 @@ public class Mafia{
       public static void pause1(){
         try{System.in.read();}
         catch(Exception e){}
+      }
+      public static void pause2(){
+        System.out.println("Press ENTER to continue.");
+        try{System.in.read();}
+        catch(Exception e){}
+        System.out.printf("%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n");
+        System.out.println("Pass the laptop to the next player.Next player please press Enter to continue.");
 
-        }
-        public static void pause2(){
-          System.out.println("Press ENTER to continue.");
-          try{System.in.read();}
-          catch(Exception e){}
-            System.out.printf("%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n");
-            System.out.println("Pass the laptop to the next player.Next player please press Enter to continue.");
+        try{System.in.read();}
+        catch(Exception e){}
 
-            try{System.in.read();}
-            catch(Exception e){}
+      }
 
-            }
-
-          }
+}
