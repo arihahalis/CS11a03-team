@@ -66,17 +66,20 @@ public class Mafia{
      }
 
 
-        //code for healer
-        //The Doctor can choose to save himself and thus survive the night.
-        //If the Doctor chooses another player and that individual is chosen by the Mafia to be killed,
-
-        //If the Doctor is chosen for death by the Mafia,
-        //he is out of the game and the townspeople can no longer be saved.
-        System.out.println("Say:Wake up the Healer and ask who they want to save.");
-        //code for healer
-
-        System.out.println("Enter the player number of the person been saved. If the healer is dead, enter the number 7");
-        int saved1 = scan.nextInt();
+        for (int j=0;j<7;j++){
+         if(roles[j].equals("Healer")){
+           if(alive[j]==true){
+             System.out.println("Say:Wake up the Healer and ask who they want to save.");
+             System.out.println("Enter the player number of the person been saved. If the healer is dead, enter the number 7");
+             System.out.println("Say: Healer, close your eyes.");
+             int saved1 = scan.nextInt();
+           }
+           else{
+             System.out.println("***The healer is already dead but please follow the script***");
+             System.out.println("Say: Healer, close your eyes.");
+           }
+         }
+       }
 
 
         System.out.println("Say: Everyone, open your eyes.");
