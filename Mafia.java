@@ -60,9 +60,17 @@ public class Mafia{
 
         //If the Doctor is chosen for death by the Mafia,
         //he is out of the game and the townspeople can no longer be saved.
-        System.out.println("Enter the player number of the person been saved.");
-        int saved1 = scan.nextInt();
+        System.out.println("Say:Wake up the Healer and the person died tonight was(point to the victim).");
+        //code for healer
+        
+        System.out.println("Say:Do you want to save ? (Enter yes or no)" );
+        String healer=scan.next();
+          if(healer.equals("yes"){
+            System.out.println("Enter the player number of the person been saved.");
+          int saved1 = scan.nextInt();
+        }
 
+       
         System.out.println("Say: Everyone, open your eyes.");
         System.out.println("Press enter to continue");
 
