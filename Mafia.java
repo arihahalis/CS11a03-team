@@ -53,7 +53,7 @@ public class Mafia{
         System.out.println("Say: Detective, close your eyes.");
 
 
-        System.out.println("Wake up the Healer and let them choose a person to save.");
+       
         //code for healer
         //The Doctor can choose to save himself and thus survive the night.
         //If the Doctor chooses another player and that individual is chosen by the Mafia to be killed,
