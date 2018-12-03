@@ -42,16 +42,25 @@ public class Mafia{
     System.out.println("Say: Detective, open your eyes. Who would you like to know about? Please show me the number.");
     // code for detective
     //If the Detective is correct, that Mafia member is eliminated from the game.
-
-    System.out.println("Enter the player number of the suspected Mafia.");
-    int suspected1 = scan.nextInt();
+    
+    for (int i=0; i<7; i++){
+    if (roles[i].equals( "Detective")){
+      if (alive[i]==true){
+      System.out.println("Enter the player number of the suspected Mafia.");
+      int suspected1 = scan.nextInt();
         if (roles[suspected1-1].equals( "Mafia")){
           System.out.println("Player "+suspected1+" is a mafia.");
         }else{
           System.out.println("Player "+suspected1+" is not a mafia.");
-        }
+          }
         System.out.println("Say: Detective, close your eyes.");
-
+        }
+        else{
+         System.out.println("***The detective is already dead but please follow the script***")
+         System.out.println("Say: Detective, close your eyes.");
+         }
+       }
+     }
 
 
         //code for healer
