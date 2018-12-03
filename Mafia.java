@@ -65,7 +65,7 @@ public class Mafia{
         
         System.out.println("Say:Do you want to save ? (Enter yes or no)" );
         String healer=scan.next();
-          if(healer.equals("yes"){
+          if(healer.equals("yes")){
             System.out.println("Enter the player number of the person been saved.");
           int saved1 = scan.nextInt();
         }
