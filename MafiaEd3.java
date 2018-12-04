@@ -70,7 +70,8 @@ public class MafiaEd3{
             int suspected1 = scan.nextInt();
             if (roles[suspected1].equals( "Mafia")){
               System.out.println("Player "+suspected1+" is a mafia.");
-            }else{
+            }
+            else{
               System.out.println("Player "+suspected1+" is not a mafia.");
             }
             System.out.println("Thumb up if the suspect is a mafia. Thumb down if the suspect is not.");
@@ -90,28 +91,25 @@ public class MafiaEd3{
             System.out.println("Enter the player number of the person been saved. If the healer is dead, enter the number 7");
             int saved1 = scan.nextInt();
             System.out.println("*** Healer, close your eyes.***");
-
+              if (victim1 == saved1){
+                System.out.println("*** No one died last night.***");
+                }
+              else {
+                  System.out.println("*** Player "+victim1+" was killed last night.***");
+                  alive[victim1] = false;
+                  }
           }
           else{
             System.out.println("The healer is already dead but please follow the script");
             System.out.println("*** Healer, close your eyes.***");
+            System.out.println("*** Player "+victim1+" was killed last night.***");
+            alive[victim1] = false;
           }
         }
       }
 
-
       System.out.println("*** Everyone, open your eyes.***");
       System.out.println("Press enter to continue");
-
-      pause1();
-
-      if (victim1 == saved1){
-        System.out.println("*** No one died last night.***");
-      } else {
-        System.out.println("*** Player "+victim1+" was killed last night.***");
-        alive[victim1] = false;
-      }
-
       pause1();
 
       System.out.println("*** Please discuss about recent events.Speak from number zero to number six.***");
@@ -149,10 +147,9 @@ public class MafiaEd3{
       System.out.println("*** Game continues.***");
       gameContinues = true;
       //System.out.printf("%s%n%s", Arrays.toString(alive), Arrays.toString(roles));
-
+     }
     }
   }
-}
 
 
 public static void playersRole(int[] players){
