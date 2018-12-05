@@ -1,3 +1,4 @@
+
 /**
 Team: Konnichiwa
 Qianni Chen, Ari Hahalis, Ruoshan Wang, Yiyang Luo
@@ -236,6 +237,7 @@ public class MafiaEd4{
     catch(Exception e){}
     System.out.printf("%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n%n");
     System.out.println("Pass the laptop to the next player.Next player please press Enter to continue.");
+    
     try{System.in.read();}
     catch(Exception e){}
   }
