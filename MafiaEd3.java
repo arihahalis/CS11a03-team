@@ -1,4 +1,5 @@
 /**
+names
 If you have ever played Mafia before, you must know how important the role of the moderator is.
 A bad moderator can significantly affect your game experience. Our program is designed for a
 moderator (even for a newbie!) in Mafia to have a smooth facilitation throughout the whole game.
