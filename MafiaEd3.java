@@ -8,7 +8,6 @@ the screen and you will be good to go!
 
 import java.util.Random;
 import java.util.Scanner;
-//import java.util.Arrays;
 
 
 public class MafiaEd3{
@@ -118,7 +117,6 @@ public class MafiaEd3{
       System.out.println("Enter the number.");
       int vote1 = scan.nextInt();
       alive[vote1] = false;
-      //System.out.println(victim1+" "+dec1+" "+saved1);
       int mafiacounter=0;
       int nonmafiacounter=0;
       for (int i=0; i<7; i++){
@@ -146,7 +144,6 @@ public class MafiaEd3{
     else {
       System.out.println("*** Game continues.***");
       gameContinues = true;
-      //System.out.printf("%s%n%s", Arrays.toString(alive), Arrays.toString(roles));
      }
     }
   }
